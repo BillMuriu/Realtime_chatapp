@@ -29,9 +29,7 @@ def MessageView(request, room_name, username):
 
     if request.method == 'POST':
         message = request.POST['message']
-
-        print(message)
-
+        
         new_message = Message(room=get_room, sender=username, message=message)
         new_message.save()
 
