@@ -18,7 +18,7 @@ def HomePage(request):
         except Room.DoesNotExist:
             new_room = Room(room_name = room)
             new_room.save()
-            # return redirect('room', room_name=room, username=username)
+            return redirect('room', room_name=room, username=username)
 
     return render(request, 'index.html')
 
